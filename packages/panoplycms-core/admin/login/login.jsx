@@ -79,16 +79,16 @@ class Login extends Component {
       }
     });
 
-    Meteor.loginWithLDAP(username, password, {
-        dn: `uid=${username},ou=people,dc=unirio,dc=br`
-    }, function(err, data) {
-        if (!err){
-            $("#login-modal").modal('hide');
-        } else{
-            event.target.login_username.value = "";
-            event.target.login_password.value = "";
-        }
-    });
+    // Meteor.loginWithLDAP(username, password, {
+    //     dn: `uid=${username},ou=people,dc=unirio,dc=br`
+    // }, function(err, data) {
+    //     if (!err){
+    //         $("#login-modal").modal('hide');
+    //     } else{
+    //         event.target.login_username.value = "";
+    //         event.target.login_password.value = "";
+    //     }
+    // });
   }
   render() {
     return (
