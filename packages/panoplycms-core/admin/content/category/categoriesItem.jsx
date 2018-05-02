@@ -6,7 +6,7 @@ import { render } from 'react-dom';
 
 export default class CategoriesItem extends Component {
   /*deleteCategory(){
-    Meteor.call('delete_category',this.props.data._id,function(err,data){
+    Meteor.call('deleteCategory',this.props.data._id,function(err,data){
       // console.log(err,data)
     });
   }

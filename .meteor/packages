@@ -57,3 +57,4 @@ deligencetechnologies:slidermodule
 #cfs:gridfs
 #cfs:filesystem
 #cfs:s3
+typ:accounts-ldap

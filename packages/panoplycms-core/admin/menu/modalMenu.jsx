@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 
 import { removeMenu } from '../actions/menu_action.js';
-import { removeMenuParamanent } from '../actions/menu_action.js';
+import { removeMenuPermanent } from '../actions/menu_action.js';
 
 
 let removeMenuHandler = function() {
@@ -16,7 +16,7 @@ let removeMenuHandler = function() {
 
 let removeMenuPermanentHandler = function() {
   let onRemoveMenuPermanent = function(id) {
-    store.dispatch(removeMenuParamanent(id))
+    store.dispatch(removeMenuPermanent(id))
   };
   return {
     onRemoveMenuPermanent

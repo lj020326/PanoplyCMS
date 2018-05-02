@@ -2,7 +2,7 @@ import { AlertMessage } from '../common/alertMessage.jsx';
 
 export const insertCategory = params => {
 	return dispatch => {
-		Meteor.call('add_category', params, (error, data)=>{
+		Meteor.call('addCategory', params, (error, data)=>{
       if(!error){
       	dispatch({
 					type: 'SUCCESS',
@@ -22,7 +22,7 @@ export const insertCategory = params => {
 
 export const editCategory = (id, params) => {
 	return dispatch => {
-		Meteor.call('update_category', id, params, (error, data)=>{
+		Meteor.call('updateCategory', id, params, (error, data)=>{
       if(!error){
       	dispatch({
 					type: 'SUCCESS',
@@ -42,7 +42,7 @@ export const editCategory = (id, params) => {
 
 export const removeCategory = id => {
 	return (dispatch) => {
-		Meteor.call('delete_category', id,  (error, data)=>{
+		Meteor.call('deleteCategory', id,  (error, data)=>{
       if(!error){
       	dispatch({
 					type: 'SUCCESS',
@@ -60,9 +60,9 @@ export const removeCategory = id => {
 	};
 };
 
-export const removeCategoryParamanent = id => {
+export const removeCategoryPermanent = id => {
 	return (dispatch) => {
-		Meteor.call('delete_category_parma', id,  (error, data)=>{
+		Meteor.call('deleteCategoryPermanent', id,  (error, data)=>{
       if(!error){
       	dispatch({
 					type: 'SUCCESS',
@@ -82,7 +82,7 @@ export const removeCategoryParamanent = id => {
 
 export const restoreCategory = id => {
 	return (dispatch) => {
-		Meteor.call('restore_category', id,  (error, data)=>{
+		Meteor.call('restoreCategory', id,  (error, data)=>{
       if(!error){
       	dispatch({
 					type: 'SUCCESS',

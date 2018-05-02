@@ -62,3 +62,6 @@ mup.json
 >>>>>>> dev2
 mup.json
 node_modules
+
+.idea/
+package-lock.json

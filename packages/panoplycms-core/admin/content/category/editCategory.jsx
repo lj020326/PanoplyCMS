@@ -31,7 +31,7 @@ class EditCategory extends Component {
       alias: alias,
       column: $('#number').val()
     }
-    /*Meteor.call('update_category', this.props._id, categoryObj,(err,data)=>{
+    /*Meteor.call('updateCategory', this.props._id, categoryObj,(err,data)=>{
       if(err)
         AlertMessage('ERROR', err.reason, 'error');
       else{

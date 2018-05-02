@@ -60,7 +60,7 @@ export const removeMenu = id => {
 	};
 };
 
-export const removeMenuParamanent = id => {
+export const removeMenuPermanent = id => {
 	return (dispatch) => {
 		Meteor.call('deleteMenuParmanent', id, (error, data) => {
       if(!error){

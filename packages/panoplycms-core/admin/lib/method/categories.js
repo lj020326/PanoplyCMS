@@ -1,9 +1,9 @@
 if(Meteor.isServer) {
 	Meteor.methods({
-		delete_category: function(id){
+		deleteCategory: function(id){
 			PanoplyCMSCollections.Categories.update({ _id: id },{ $set:{ trash:true } });
 		},
-		update_category: function(id, data){
+		updateCategory: function(id, data){
 		  return PanoplyCMSCollections.Categories.update({ _id: id }, {
 				$set: {
 					title: data.title,
@@ -13,7 +13,7 @@ if(Meteor.isServer) {
 				}
 			});
 		},
-		add_category: function(data){
+		addCategory: function(data){
 		  return PanoplyCMSCollections.Categories.insert({
 				title: data.title,
 				alias: data.alias,
@@ -25,10 +25,10 @@ if(Meteor.isServer) {
 				ownerId: Meteor.userId()
 			});
 		},
-		restore_category:function(id){
+		restoreCategory:function(id){
 			PanoplyCMSCollections.Categories.update({_id:id},{ $set:{ trash:false} })
 		},
-		delete_category_parma:function(id){
+		deleteCategoryPermanent:function(id){
 			PanoplyCMSCollections.Categories.remove({ _id:id })
 		}
 	});

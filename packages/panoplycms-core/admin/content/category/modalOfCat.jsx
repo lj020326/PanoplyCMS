@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 
 import { removeCategory } from '../../actions/category_action.js';
-import { removeCategoryParamanent } from '../../actions/category_action.js';
+import { removeCategoryPermanent } from '../../actions/category_action.js';
 
 let removeCategoryHandler = function() {
   let onRemoveCategory = function(id, obj) {
@@ -15,7 +15,7 @@ let removeCategoryHandler = function() {
 
 let removeCategoryPermanentHandler = function() {
   let onRemoveCategoryPermanent = function(id) {
-    store.dispatch(removeCategoryParamanent(id))
+    store.dispatch(removeCategoryPermanent(id))
   };
   return {
     onRemoveCategoryPermanent
@@ -31,7 +31,7 @@ export default class ModalOfCat extends Component {
   }
   deleteCategory(){
     if(this.props.stateVal){
-      /*Meteor.call('delete_category_parma',this.props.data._id,(err,data)=>{
+      /*Meteor.call('deleteCategoryPermanent',this.props.data._id,(err,data)=>{
       });*/
       this.removeCategoryDataPermanentHandler.onRemoveCategoryPermanent(this.props.data._id);
     }else{
@@ -39,7 +39,7 @@ export default class ModalOfCat extends Component {
       isExistArticle=_.isEmpty(isExistArticle);
       if(isExistArticle){
         this.removeCategoryDataHandler.onRemoveCategory(this.props.data._id);
-        /*Meteor.call('delete_category', this.props.data._id,(err,data)=>{
+        /*Meteor.call('deleteCategory', this.props.data._id,(err,data)=>{
         });*/
       }else{
        $('#articlExist.modal').modal()

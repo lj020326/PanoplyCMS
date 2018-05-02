@@ -1,6 +1,6 @@
 if(Meteor.isServer) {	
 	Meteor.methods({
-		'updateUser':function(obj){
+		updateUser:function(obj){
 			return Meteor.users.update({_id:Meteor.userId()}, {$set:obj});
 		}
 	})

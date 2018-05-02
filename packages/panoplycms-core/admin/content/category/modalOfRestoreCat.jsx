@@ -19,7 +19,7 @@ export default class ModalOfRestoreCat extends Component {
     this.handler = restoreCategoryHandler();
   }
   restoreCategory(){
-    /*Meteor.call('restore_category', this.props.data._id,function(err,data){
+    /*Meteor.call('restoreCategory', this.props.data._id,function(err,data){
       if(err){
         console.log(err)
       }else{}

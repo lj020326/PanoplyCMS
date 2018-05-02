@@ -1,6 +1,6 @@
 if(Meteor.isServer) {
 	Meteor.methods({
-		saveSerachKey: function(k){
+		saveSearchKey: function(k){
 			return PanoplyCMSCollections.Search.insert({
 				Key:k,
 				createdAt: new Date(),

@@ -34,7 +34,7 @@ export default class AddCategory extends Component {
       alias: aliasData,
       column: $('#number').val()
     }
-    /*Meteor.call('add_category', categoryObj, (err,data)=>{
+    /*Meteor.call('addCategory', categoryObj, (err,data)=>{
       if(err){
         AlertMessage('ERROR', 'Internal server error or duplicate categories can not insert.', 'error');
       }else{

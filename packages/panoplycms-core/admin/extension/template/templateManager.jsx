@@ -24,7 +24,7 @@ class TemplateManger extends Component {
 			}
 			i++;
 		})
-		Meteor.call('setDefaultTempalteStatus', modifedArray, function(err,data){
+		Meteor.call('setDefaultTemplateStatus', modifedArray, function(err, data){
 		})
 	}
 	showLayout(p, i){

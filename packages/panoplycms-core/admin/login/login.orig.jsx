@@ -65,7 +65,6 @@ class Login extends Component {
     event.preventDefault();
     let email = $('#email').val();
     let password = $('#password').val();
-
     Meteor.loginWithPassword(email, password, (err,data) =>{
       if(err){
         // console.log("Error while log in ->>", err);
@@ -77,17 +76,6 @@ class Login extends Component {
           FlowRouter.go('dashboard');
         },1000)
       }
-    });
-
-    Meteor.loginWithLDAP(username, password, {
-        dn: `uid=${username},ou=people,dc=unirio,dc=br`
-    }, function(err, data) {
-        if (!err){
-            $("#login-modal").modal('hide');
-        } else{
-            event.target.login_username.value = "";
-            event.target.login_password.value = "";
-        }
     });
   }
   render() {
